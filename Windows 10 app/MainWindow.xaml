@@ -1,0 +1,46 @@
+﻿<Window x:Class="Windows_10_app.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Windows_10_app"
+        mc:Ignorable="d"
+        Title="Hello Blur!" 
+        Height="250" Width="500" ResizeMode="NoResize"
+		Background="#66000000"
+		AllowsTransparency="True"
+		WindowStyle="None"
+		BorderThickness="1"
+		BorderBrush="#88ffffff"
+		WindowStartupLocation="Manual" 
+        Top="5"
+		Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="1.4*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.Resources>
+            
+        </Grid.Resources>
+        <Button
+            Name="btnClose"
+            Click="CloseApp"
+            Grid.Row="0" Grid.RowSpan="2"
+            Content="x"
+            Foreground="White" Background="#00000000" BorderThickness="0"
+            Padding="10" Height="33" Width="33" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        <TextBlock Name="digitalClock" 
+                   Grid.Row="1" Grid.ColumnSpan="1" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                   FontSize="115" Foreground="White" FontFamily="Roboto Thin"/>
+        <TextBlock Name="dateClock"
+                   Grid.Row="2" Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center" VerticalAlignment="Top"
+                   FontSize="50" Foreground="White" FontFamily="Roboto Thin"/>
+    </Grid>
+</Window>
